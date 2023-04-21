@@ -20,9 +20,7 @@ The CSV files must have the following format:
 - UTF-8 encoding
 
 > **Warning**
-> When adapting you files to this required format, please keep all the rows, even if some values are missing.
-
-> For example, if you don't have the author of a document, please keep the column and leave it empty. In this way, we do not lose any information and maybe for a certain downstream task, we do not need the author, but we need the document and the summary.
+> When adapting you files to this required format, please keep all the rows, even if some values are missing. For example, if you don't have the author of a document, please keep the column and leave it empty. In this way, we do not lose any information and maybe for a certain downstream task, we do not need the author, but we need the document and the summary.
 
 ## Checker Usage
 ```sh
