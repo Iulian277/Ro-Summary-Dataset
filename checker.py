@@ -131,11 +131,7 @@ def check_parse_csvs(input_dir):
         file_path = os.path.join(input_dir, file)
         try:
             df = pd.read_csv(file_path, delimiter=',', encoding=ENCODING, index_col=False)
-            print(20*'-----')
             print(f'[W]: Successfully parsed the file `{file_path}` with `{len(df)}` rows.')
-            print(df)
-            df.to_csv(file, index=False)
-            print(20*'-----')
         except Exception as e:
             print(traceback.format_exc())
             print(f'[X]: Could not parse the file `{file_path}` because of error `{e}`.')
