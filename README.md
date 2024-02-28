@@ -1,14 +1,14 @@
 # Romanian Summarization Dataset
 
 ## CSV File Format
-The CSV files must have the following header (6 columns):
-`Document,Summary,Title,Keywords,Url,Author`
+The CSV files must have the following header (7 columns):
+`Document,Summary,Title,Keywords,Url,Author,Topic`
 
 Example of a valid CSV file:
 ```csv
-Document,Summary,Title,Keywords,Url,Author
-Doc1Text,Sum1Text,Title1,Keywords1Text,Url1,Author1
-Doc2Text,Sum2Text,Title2,Keywords2Text,Url2,Author2
+Document,Summary,Title,Keywords,Url,Author,Topic
+Doc1Text,Sum1Text,Title1,Keywords1Text,Url1,Author1,Topic1
+Doc2Text,Sum2Text,Title2,Keywords2Text,Url2,Author2,Topic2
 ...
 ```
 
