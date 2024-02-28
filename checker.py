@@ -11,6 +11,7 @@ CSV_COLUMNS = [
     'Keywords',
     'Url',
     'Author',
+    'Topic',
 ]
 
 def parse_args():
