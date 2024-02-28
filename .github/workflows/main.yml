@@ -28,4 +28,4 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run checker.py
-      run: python checker.py ${{ github.event.inputs.input_dir }}
+      run: python checker.py --input_dir=${{ github.event.inputs.input_dir }}
