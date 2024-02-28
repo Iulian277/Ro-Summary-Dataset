@@ -1,33 +1,23 @@
-name: Run checker.py on PR creation
-
-on:
-  pull_request:
-    types: [opened]
-  workflow_dispatch:
-    inputs:
-      input_dir:
-        description: 'Input directory for checker.py'
-        required: true
+name: actions_on_main_branch
+on: 
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    branches:    
+      - 'main'
 
 jobs:
-  build:
+  job1:
+    name: check_adminA
     runs-on: ubuntu-latest
-
+    env:
+      NAME_ADMIN: Iulian277
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
-        
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run checker.py
-      run: python checker.py --input_dir=${{ github.event.inputs.input_dir }}
+      - name: st1
+        if: ${{ github.actor != env.NAME_ADMIN }}
+        run: exit 1
+      - name: st2
+        if: ${{ github.actor == env.NAME_ADMIN }}
+        run: echo "ok"
