@@ -32,48 +32,17 @@ The checker will warn you if the CSV files are not valid.
 
 If the CSV files are valid, the checker will try to parse the CSV files and will output the status for each file.
 
-
 ## How to add a dataset
-- Create a new `branch` called `dataset_name`
-- Create a new `directory` called `dataset_name` in the root of the repository
-- Add the CSV files in the `dataset_name` directory
-- Ensure that the CSV files are valid (by running the `checker.py` script)
-- Create a `Pull Request` from branch `dataset_name` to `main`
-- `Wait` for a review from one of the maintainers.
-- If the PR is approved, it will be merged into `main` and the dataset will be available for everyone.
+- Create a Zenodo account: https://zenodo.org/
+- Request access to the `Romanian Summarization` community: https://zenodo.org/communities/romanian_summarization
+    - If this doesn't work, please contact me and I will add you to the community.
+- Go to the `Romanian Summarization` community and click on `New Upload`
+- Upload all your CSV files
+- **Set `Visibility` to `Restricted` (only members of the community can access the dataset)**
+- Select `No` for `Do you already have a DOI for this upload?`
+- `Resource Type` should be `Dataset`
+- `Title` should contain the dataset sources separated by underscores (e.g: protv_digi24)
+- Click on `Submit for review` and wait for the dataset to be approved.
 
-### Example
-If you want to add a new dataset extracted from `ProTV`, you will have to:
-- Create a new `branch` called `protv`
-- Create a new `directory` called `protv` in the root of the repository
-- Add the CSV files in the `protv` directory.
-
-    - The tree structure will look like this:
-    ```
-    .
-    ├── protv
-    |   └── *.csv
-    ``` 
-- Ensure that the CSV files are valid (by running the `checker.py` script)
-- Create a `Pull Request` from branch `protv` to `main`
-- `Wait` for a review from one of the maintainers.
-- If the PR is approved, it will be merged into `main` and the dataset will be available for everyone.
-
-## Git LFS
-
-Some of the CSV files are too large to be stored in the repository. So, we use [Git LFS](https://git-lfs.github.com/) to store them. Make sure you have Git LFS installed on your machine.
-
-Ensure that you `track` all the `.csv` files with Git LFS:
-```sh
-$ git lfs track "*.csv"
-```
-
-After that, you can easily add the files to the repository:
-```sh
-$ git checkout -b <dataset_name>
-$ git add <dirname>/*.csv
-$ git commit -m "Add dataset <dataset_name>"
-$ git push origin <dataset_name>
-```
-
-
+- After this process, the dataset will be checked by the owner using the checker and if everything is ok, the dataset will be published.
+- Please make sure that the CSV files are valid before uploading them to Zenodo.
