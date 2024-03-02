@@ -42,6 +42,8 @@ If the CSV files are valid, the checker will try to parse the CSV files and will
 - Select `No` for `Do you already have a DOI for this upload?`
 - `Resource Type` should be `Dataset`
 - `Title` should contain the dataset sources separated by underscores (e.g: protv_digi24)
+- You can simply close sections like the following by clicking on the `X` button on the right
+![ignore_sections](ignore_sections.png)
 - Click on `Submit for review` and wait for the dataset to be approved.
 
 - After this process, the dataset will be checked by the owner using the checker and if everything is ok, the dataset will be published.
