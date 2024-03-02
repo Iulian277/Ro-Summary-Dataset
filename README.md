@@ -48,3 +48,6 @@ If the CSV files are valid, the checker will try to parse the CSV files and will
 
 - After this process, the dataset will be checked by the owner using the checker and if everything is ok, the dataset will be published.
 - Please make sure that the CSV files are valid before uploading them to Zenodo.
+
+- The following is an example of a published dataset
+![dataset_example](dataset_example.png)
